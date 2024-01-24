@@ -15,7 +15,7 @@ public class ViaCepController {
     private final ViaCepService service;
 
     @GetMapping("/consulta")
-    public ResponseEntity consultaCep(@RequestBody ViaCepRequest viaCepRequest){
+    public ResponseEntity<ViaCepResponse> consultaCep(@RequestBody ViaCepRequest viaCepRequest){
         return ResponseEntity.ok(service.buscaCep(viaCepRequest));
     }
 }
